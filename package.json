@@ -15,9 +15,12 @@
     "@splinetool/react-spline": "^2.2.2",
     "@splinetool/runtime": "^0.9.106",
     "framer-motion": "^6",
+    "graphql-request": "^5.0.0",
+    "graphql-tag": "^2.12.6",
     "next": "latest",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-query": "^3.39.2",
     "react-spline": "^1.2.1"
   },
   "devDependencies": {
