@@ -1,4 +1,4 @@
-import gql from 'graphql-tag';
+import { gql } from 'graphql-request';
 
 export const GET_TEAS = gql`
   query getTeas {
@@ -15,9 +15,9 @@ export const GET_TEAS = gql`
   }
 `;
 
-export const GET_TEA = gql`
-  query getTea($scientificName: String!) {
-    pages(scientificName: $scientificName) {
+export const GET_TEA_BY_SLUG = gql`
+  query getTeaBySlug($slug: String!) {
+    teas(where: { slug: $slug }) {
       id
       scientificName
       slug
