@@ -3,14 +3,14 @@ import Image from 'next/image';
 export interface PageTemplateData {
   scientificName: string;
   commonName: string[];
-  goodFor: string[];
+  symptoms: string[];
   image: string;
 }
 
 export const PageTemplate = ({
   scientificName,
   commonName,
-  goodFor,
+  symptoms,
   image,
 }: PageTemplateData) => (
   <>
@@ -29,7 +29,7 @@ export const PageTemplate = ({
       <h2>Bom para:</h2>
     </b>
     <ul>
-      {goodFor.map((gf) => (
+      {symptoms.map((gf) => (
         <li key={gf}>{gf}</li>
       ))}
     </ul>

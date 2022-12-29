@@ -7,7 +7,7 @@ import { PageTemplate, PageTemplateData } from '../templates/page';
 export default function TeaPage({
   scientificName,
   commonName,
-  goodFor,
+  symptoms,
   image,
 }: PageTemplateData) {
   const router = useRouter();
@@ -18,7 +18,7 @@ export default function TeaPage({
     <PageTemplate
       scientificName={scientificName}
       commonName={commonName}
-      goodFor={goodFor}
+      symptoms={symptoms}
       image={image}
     />
   );
@@ -45,7 +45,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     props: {
       scientificName: teas[0].scientificName,
       commonName: teas[0].commonName,
-      goodFor: teas[0].goodFor,
+      symptoms: teas[0].symptoms,
       image: teas[0].image?.url,
     },
   };
